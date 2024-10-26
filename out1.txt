@@ -1,0 +1,49 @@
+Reading the directory: ./
+.: directory -- with stat
+.: directory -- with lstat
+
+..: directory -- with stat
+..: directory -- with lstat
+
+Lab2log.txt: regular file -- with stat
+Lab2log.txt: regular file -- with lstat
+
+tryShell(2).c: regular file -- with stat
+tryShell(2).c: regular file -- with lstat
+
+hello.c: regular file -- with stat
+hello.c: regular file -- with lstat
+
+sobell10(1).zip: regular file -- with stat
+sobell10(1).zip: regular file -- with lstat
+
+simple: regular file -- with stat
+simple: regular file -- with lstat
+
+simple-shell1.c: regular file -- with stat
+simple-shell1.c: regular file -- with lstat
+
+ls1.c: regular file -- with stat
+ls1.c: regular file -- with lstat
+
+out1.txt: regular file -- with stat
+out1.txt: regular file -- with lstat
+
+Lab1log.txt: regular file -- with stat
+Lab1log.txt: regular file -- with lstat
+
+sample-prog.zip: regular file -- with stat
+sample-prog.zip: regular file -- with lstat
+
+ls1: regular file -- with stat
+ls1: regular file -- with lstat
+
+Count of Regular files : 11
+Count of Directories: 2
+Count of Symbolic links: 0
+Count of Block special files: 0
+Count of Character special files: 0
+Count of FIFOs: 0
+Count of Sockets: 0
+Count of Unknowns: 0
+Total entries: 13

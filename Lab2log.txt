@@ -1,0 +1,355 @@
+{cslinux1:~} mkdir week06Lab2
+{cslinux1:~} cd week06Lab2
+{cslinux1:~/week06Lab2} ls
+simple-shell1.c
+{cslinux1:~/week06Lab2} vi simple-shell1.c
+{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} gcc myshell.c -o myshell
+myshell.c:1:18: fatal error: apue.h: No such file or directory
+ #include "apue.h"
+                  ^
+compilation terminated.
+{cslinux1:~/week06Lab2} gcc myshell.c -o myshell
+myshell.c: In function ‘main’:
+myshell.c:9:2: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘char’
+  char prompt[] = "myshell % "; // shell prompt
+  ^
+myshell.c:13:15: error: ‘line’ undeclared (first use in this function)
+  while( fgets(line, sizeof line, stdin) != NULL ) // checking for errors
+               ^
+myshell.c:13:15: note: each undeclared identifier is reported only once for each function it appears in
+myshell.c:28:48: error: ‘netId’ undeclared (first use in this function)
+    snprintf(line, sizeof(line), "w | grep %s", netId);
+                                                ^
+{cslinux1:~/week06Lab2} cat myshell.c
+#include "apue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char line[256] 			// max amount of characters on one line.
+	char prompt[] = "myshell % ";	// shell prompt
+	
+	printf("%s", prompt);		// prints out the shell prompt
+
+	while( fgets(line, sizeof line, stdin) != NULL ) // checking for errors
+	{
+		/* fgets leaves '\n' in input buffer. ditch it */
+		line[strlen(line)-1] = '\0';
+		system( line );       // easy shell to be worked.
+		printf("%s", prompt );
+		
+		if(strcmp(line, "exit") == 0){
+			printf("Shell terminated.");
+			exit(0);
+		}
+		else if(strcmp(line, "listall") == 0){
+			strcpy(line, "ls -la");
+		}
+		else if(strmcp(line, "showme") == 0) {
+			snprintf(line, sizeof(line), "w | grep %s", netId);
+		}
+
+		int sysCall = system(line);
+		if(sysCall == -1){
+			perror("syscall failed");
+		}
+		
+	}
+	return 0;
+}
+
+
+
+
+
+{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} gcc myshell.c -o myshell
+myshell.c: In function ‘main’:
+myshell.c:28:48: error: ‘netId’ undeclared (first use in this function)
+    snprintf(line, sizeof(line), "w | grep %s", netId);
+                                                ^
+myshell.c:28:48: note: each undeclared identifier is reported only once for each function it appears in
+{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} gcc myshell.c -o myshell
+/usr/tmp/ccQ7w5dt.o: In function `main':
+myshell.c:(.text+0x104): undefined reference to `strmcp'
+collect2: error: ld returned 1 exit status
+{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} gcc myshell.c -o myshell
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 20:39:03 CDT 2024
+cslinux1.utdallas.edu
+Fri Sep 27 20:39:03 CDT 2024
+cslinux1.utdallas.edu
+myshell % ls -l
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  851 Sep 27 20:38 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  851 Sep 27 20:38 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % whoami
+mga190001
+mga190001
+myshell % listall
+sh: listall: command not found
+total 160
+drwx--x--x  2 mga190001 sn  109 Sep 27 20:38 .
+drwx--x--x 19 mga190001 sn 1043 Sep 27 20:38 ..
+-rw-------  1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x  1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw-------  1 mga190001 sn  851 Sep 27 20:38 myshell.c
+-rw-------  1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % showme
+sh: showme: command not found
+mga19000 pts/69   10.50.240.54     19:14    1.00s  0.17s  0.00s sh -c w | grep mga
+myshell % ls -l myshell*
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  851 Sep 27 20:38 myshell.c
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  851 Sep 27 20:38 myshell.c
+myshell % head myshell.c
+#include "apue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char line[256];			// max amount of characters on one line.
+	char prompt[] = "myshell % ";	// shell prompt
+	
+#include "apue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char line[256];			// max amount of characters on one line.
+	char prompt[] = "myshell % ";	// shell prompt
+	
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 20:42:25 CDT 2024
+cslinux1.utdallas.edu
+Fri Sep 27 20:42:25 CDT 2024
+cslinux1.utdallas.edu
+myshell % ls -l
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % whoami 
+mga190001
+mga190001
+myshell % who | grep `whoami`
+mga190001 pts/69       2024-09-27 19:14 (10.50.240.54)
+mga190001 pts/69       2024-09-27 19:14 (10.50.240.54)
+myshell % showme
+sh: showme: command not found
+mga19000 pts/69   10.50.240.54     19:14    2.00s  0.17s  0.04s sshd: mga190001 [priv]
+myshell % listall
+sh: listall: command not found
+total 160
+drwx--x--x  2 mga190001 sn  109 Sep 27 20:42 .
+drwx--x--x 19 mga190001 sn 1043 Sep 27 20:42 ..
+-rw-------  1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x  1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw-------  1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw-------  1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % ls -l
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % ls -l myshell *
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  776 Sep 27 20:42 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % head myshell.c
+#include "apue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char line[256];			// max amount of characters on one line.
+	char prompt[] = "myshell % ";	// shell prompt
+	
+#include "apue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char line[256];			// max amount of characters on one line.
+	char prompt[] = "myshell % ";	// shell prompt
+	
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 20:51:33 CDT 2024
+cslinux1.utdallas.edu
+Fri Sep 27 20:51:33 CDT 2024
+cslinux1.utdallas.edu
+myshell % ls -l
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  718 Sep 27 20:51 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  718 Sep 27 20:51 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % whoami
+mga190001
+mga190001
+myshell % listall
+sh: listall: command not found
+total 160
+drwx--x--x  2 mga190001 sn  109 Sep 27 20:51 .
+drwx--x--x 19 mga190001 sn 1043 Sep 27 20:51 ..
+-rw-------  1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x  1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw-------  1 mga190001 sn  718 Sep 27 20:51 myshell.c
+-rw-------  1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % showme
+sh: showme: command not found
+mga19000 pts/69   10.50.240.54     19:14    5.00s  0.17s  0.04s sshd: mga190001 [priv]
+myshell % ls -l myshell *
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  718 Sep 27 20:51 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 20:38 myshell
+-rw------- 1 mga190001 sn  718 Sep 27 20:51 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 21:02:08 CDT 2024
+cslinux1.utdallas.edu
+Fri Sep 27 21:02:08 CDT 2024
+cslinux1.utdallas.edu
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 21:05:09 CDT 2024
+cslinux1.utdallas.edu
+Fri Sep 27 21:05:09 CDT 2024
+cslinux1.utdallas.edu
+myshell % date
+Fri Sep 27 21:06:06 CDT 2024
+Fri Sep 27 21:06:06 CDT 2024
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} ./myshell
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 21:22:15 CDT 2024
+cslinux1.utdallas.edu
+Fri Sep 27 21:22:15 CDT 2024
+cslinux1.utdallas.edu
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} vi myshell.c
+{cslinux1:~/week06Lab2} ./myshell
+myshell % exit
+myshell % Shell terminated.{cslinux1:~/week06Lab2} gcc myshell.c -o myshell
+{cslinux1:~/week06Lab2} ./myshell
+myshell % date ; hostname
+Fri Sep 27 21:30:46 CDT 2024
+cslinux1.utdallas.edu
+myshell % ls -l
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 21:30 myshell
+-rw------- 1 mga190001 sn  944 Sep 27 21:30 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % whoami
+mga190001
+myshell % listall
+total 160
+drwx--x--x  2 mga190001 sn  109 Sep 27 21:30 .
+drwx--x--x 19 mga190001 sn 1043 Sep 27 21:30 ..
+-rw-------  1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x  1 mga190001 sn 8712 Sep 27 21:30 myshell
+-rw-------  1 mga190001 sn  944 Sep 27 21:30 myshell.c
+-rw-------  1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+myshell % showme
+mga19000 pts/69   10.50.240.54     19:14    6.00s  0.22s  0.00s sh -c w | grep mga
+myshell % ls -l myshell*
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 21:30 myshell
+-rw------- 1 mga190001 sn  944 Sep 27 21:30 myshell.c
+myshell % head myshell.c
+#include "apue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char line[256];	// max amount of characters on one line.
+	char prompt[] = "myshell % "; // shell prompt
+
+myshell % exit
+Shell terminated.
+
+
+{cslinux1:~/week06Lab2} date
+Fri Sep 27 21:34:08 CDT 2024
+{cslinux1:~/week06Lab2} ls -l
+total 96
+-rw------- 1 mga190001 sn 4631 Sep 27 20:34 apue.h
+-rwx--x--x 1 mga190001 sn 8712 Sep 27 21:30 myshell
+-rw------- 1 mga190001 sn  944 Sep 27 21:30 myshell.c
+-rw------- 1 mga190001 sn  553 Sep 27 19:56 simple-shell1.c
+{cslinux1:~/week06Lab2} uname -a
+Linux cslinux1.utdallas.edu 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+{cslinux1:~/week06Lab2} exit
+logout
+Connection to cs1.utdallas.edu closed.
+➜  Malakais-MacBook-Pro ~ % 

@@ -1,0 +1,102 @@
+      privacy laws.
+
+       ATTENTION: utdnetid != utdnetid@utdallas.edu (UTD != Google!)
+
+   Just use utdnetid, and for the love of programming, STOP USING ALL CAPS!
+
+  [[NOTE: All CS Graduate Students should use csgrads1.utdallas.edu      ]]
+  [[   If you are a CS Graduate Student, you cannot logon to this server.]]
+
+
+ ***** This system will require a connection to the GlobalProtect VPN starting
+ on the following dates:
+
+ cslinux1.utdallas.edu - June 15, 2020
+ cslinux2.utdallas.edu - June 22, 2020
+
+ ***** GlobalProtect VPN Instructions: https://www.utdallas.edu/oit/howto/vpn/
+
+Last login: Fri Oct  4 17:23:59 2024 from 10.50.240.6
+
+                       ***---***---***---***---***---***
+                    csgrads1.utdallas.edu - CentOS Linux 7.9
+                 --All CS Graduate Students should use csgrads1--
+                      cs1.utdallas.edu - CentOS Linux 7.9
+                      cs2.utdallas.edu - CentOS Linux 7.9
+                       ***---***---***---***---***---***
+
+This system is for use by CS students who need a general purpose Linux system 
+to complete homework assignments.  Computationally or resource intensive 
+simulations will be throttled automatically.
+
+Thank you,
+CS Lab Manager
+cs-labs@utdallas.edu
+
+               /scratch disk space can be used for temporary files.
+      All files within /scratch will be erased on a regular basis (Sunday 0300).
+
+{cslinux1:~} mkdir week07Lab1
+{cslinux1:~} cd week07Lab1
+{cslinux1:~/week07Lab1} date
+Fri Oct  4 18:46:13 CDT 2024
+{cslinux1:~/week07Lab1} whoami
+mga190001
+{cslinux1:~/week07Lab1} clear
+
+{cslinux1:~/week07Lab1} gcc tryShell1.c -o tryShell1
+{cslinux1:~/week07Lab1} ./tryShell1
+Shell -> date
+
+Fri Oct  4 18:48:29 CDT 2024
+Shell -> whoami 
+
+mga190001
+Shell -> uname -a
+
+Linux cslinux1.utdallas.edu 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+Shell -> ls -l tryShell1.c
+
+-rw------- 1 mga190001 sn 2618 Oct  4 18:34 tryShell1.c
+Shell -> head tryShell1.c
+
+/*  tryShell.c
+    source: 	www.csl.mtu.edu/cs4411.ck/www/NOTES/process/fork/exec.html
+*/
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+Shell -> compile tryShell1.c
+
+Shell -> compile hello.c   
+
+Shell -> ls -l hello*
+
+ls: cannot access hello*: No such file or directory
+Shell -> listall
+
+total 208
+drwx--x--x  2 mga190001 sn  183 Oct  4 18:50 .
+drwx--x--x 20 mga190001 sn 1071 Oct  4 18:35 ..
+-rwx--x--x  1 mga190001 sn 8408 Oct  4 18:50 hello
+-rwx------  1 mga190001 sn  181 Oct  4 18:35 hello.c
+-rwx--x--x  1 mga190001 sn 8928 Oct  4 18:33 .nfs0000000331b84f4200001574
+-rw-------  1 mga190001 sn 4209 Oct  3 13:04 sample-prog.zip
+-rwx--x--x  1 mga190001 sn 8928 Oct  4 18:49 tryShell1
+-rw-------  1 mga190001 sn 2618 Oct  4 18:34 tryShell1.c
+Shell -> date
+
+Fri Oct  4 18:51:16 CDT 2024
+Shell -> exit
+
+Shell terminated.
+
+
+{cslinux1:~/week07Lab1} exit
+logout
+Connection to cs1.utdallas.edu closed.
+➜  Malakais-MacBook-Pro ~ % 

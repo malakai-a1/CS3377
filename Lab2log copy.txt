@@ -1,0 +1,165 @@
+Last login: Fri Oct  4 17:12:07 on ttys000
+➜  utdvpn-10-50-219-18 ~ % ssh mga190001@cs1.utdallas.edu
+                      University of Texas at Dallas
+                      Department of Computer Science
+
+                Use of UTD Information Systems is subject to
+          the UTD Information Security and Acceptable Use Policy.
+
+  Pursuant to Texas Administrative Code 202:
+  (1) Unauthorized use is prohibited;
+  (2) Usage may be subject to security testing and monitoring;
+  (3) Misuse is subject to criminal prosecution; and
+  (4) No expectation of privacy except as otherwise provided by applicable
+      privacy laws.
+
+       ATTENTION: utdnetid != utdnetid@utdallas.edu (UTD != Google!)
+
+   Just use utdnetid, and for the love of programming, STOP USING ALL CAPS!
+
+  [[NOTE: All CS Graduate Students should use csgrads1.utdallas.edu      ]]
+  [[   If you are a CS Graduate Student, you cannot logon to this server.]]
+
+
+ ***** This system will require a connection to the GlobalProtect VPN starting
+ on the following dates:
+
+ cslinux1.utdallas.edu - June 15, 2020
+ cslinux2.utdallas.edu - June 22, 2020
+
+ ***** GlobalProtect VPN Instructions: https://www.utdallas.edu/oit/howto/vpn/
+
+Last login: Fri Oct  4 18:45:17 2024 from 10.50.240.6
+
+                       ***---***---***---***---***---***
+                    csgrads1.utdallas.edu - CentOS Linux 7.9
+                 --All CS Graduate Students should use csgrads1--
+                      cs1.utdallas.edu - CentOS Linux 7.9
+                      cs2.utdallas.edu - CentOS Linux 7.9
+                       ***---***---***---***---***---***
+
+This system is for use by CS students who need a general purpose Linux system 
+to complete homework assignments.  Computationally or resource intensive 
+simulations will be throttled automatically.
+
+Thank you,
+CS Lab Manager
+cs-labs@utdallas.edu
+
+               /scratch disk space can be used for temporary files.
+      All files within /scratch will be erased on a regular basis (Sunday 0300).
+
+{cslinux1:~} mkdir week07Lab2
+{cslinux1:~} cd week07Lab2
+{cslinux1:~/week07Lab2} ls 
+{cslinux1:~/week07Lab2} ls -l
+total 0
+{cslinux1:~/week07Lab2} cd
+{cslinux1:~} mv ls1.c ~/week07Lab2
+{cslinux1:~} cd week07Lab2
+{cslinux1:~/week07Lab2} ls -l
+total 24
+-rw------- 1 mga190001 sn 2290 Oct  4 19:04 ls1.c
+{cslinux1:~/week07Lab2} gcc ls1.c -o ls1
+{cslinux1:~/week07Lab2} ./ls1 ./
+.: directory -- with stat
+.: directory -- with lstat
+
+..: directory -- with stat
+..: directory -- with lstat
+
+ls1: regular file -- with stat
+ls1: regular file -- with lstat
+
+ls1.c: regular file -- with stat
+ls1.c: regular file -- with lstat
+
+{cslinux1:~/week07Lab2} ./ls1 /etc > out1.txt
+Can't stat grub2.cfg: Permission denied
+Can't stat extlinux.conf: No such file or directory
+{cslinux1:~/week07Lab2} ./ls1 /etc | wc
+Can't stat grub2.cfg: Permission denied
+Can't stat extlinux.conf: No such file or directory
+   1263    4680   31911
+{cslinux1:~/week07Lab2} ./ls1 ls -l
+usage: ./ls1 dir_name
+{cslinux1:~/week07Lab2} mv ls1.c ls2.c
+{cslinux1:~/week07Lab2} vi ls2.c
+{cslinux1:~/week07Lab2} gcc ls2.c -o ls2
+{cslinux1:~/week07Lab2} ./ls2
+usage: ./ls2 dir_name
+{cslinux1:~/week07Lab2} ./ls2 ./
+Reading the directory: ./
+.: directory -- with stat
+.: directory -- with lstat
+
+..: directory -- with stat
+..: directory -- with lstat
+
+ls2.c: regular file -- with stat
+ls2.c: regular file -- with lstat
+
+ls1: regular file -- with stat
+ls1: regular file -- with lstat
+
+out1.txt: regular file -- with stat
+out1.txt: regular file -- with lstat
+
+ls2: regular file -- with stat
+ls2: regular file -- with lstat
+
+Count of Regular files : 4
+Count of Directories: 2
+Count of Symbolic links: 0
+Count of Block special files: 0
+Count of Character special files: 0
+Count of FIFOs: 0
+Count of Sockets: 0
+Count of Unknowns: 0
+Total entries: 6
+{cslinux1:~/week07Lab2} ./ls2 ./ > out1.txt
+{cslinux1:~/week07Lab2} ./ls2 /etc > out2.txt
+Can't stat grub2.cfg: Permission denied
+Can't stat extlinux.conf: No such file or directory
+{cslinux1:~/week07Lab2} tail -30 out2.txt
+edac: directory -- with stat
+edac: directory -- with lstat
+
+omreg.cfg: regular file -- with stat
+omreg.cfg: symbolic link -- with lstat
+
+shells: regular file -- with stat
+shells: regular file -- with lstat
+
+issue.d: directory -- with stat
+issue.d: directory -- with lstat
+
+kde: directory -- with stat
+kde: directory -- with lstat
+
+issue.ORIG: regular file -- with stat
+issue.ORIG: regular file -- with lstat
+
+rwtab.d: directory -- with stat
+rwtab.d: directory -- with lstat
+
+Count of Regular files : 229
+Count of Directories: 190
+Count of Symbolic links: 2
+Count of Block special files: 0
+Count of Character special files: 0
+Count of FIFOs: 0
+Count of Sockets: 0
+Count of Unknowns: 0
+Total entries: 421
+{cslinux1:~/week07Lab2} ls -l
+total 120
+-rwx--x--x 1 mga190001 sn 13176 Oct  4 19:06 ls1
+-rwx--x--x 1 mga190001 sn 13176 Oct  4 19:37 ls2
+-rw------- 1 mga190001 sn  3392 Oct  4 19:36 ls2.c
+-rw------- 1 mga190001 sn   628 Oct  4 19:38 out1.txt
+-rw------- 1 mga190001 sn 32167 Oct  4 19:38 out2.txt
+{cslinux1:~/week07Lab2} exit
+logout
+Connection to cs1.utdallas.edu closed.
+➜  utdvpn-10-50-219-18 ~ % 

@@ -1,0 +1,1335 @@
+
+  Pursuant to Texas Administrative Code 202:
+  (1) Unauthorized use is prohibited;
+  (2) Usage may be subject to security testing and monitoring;
+  (3) Misuse is subject to criminal prosecution; and
+  (4) No expectation of privacy except as otherwise provided by applicable
+      privacy laws.
+
+       ATTENTION: utdnetid != utdnetid@utdallas.edu (UTD != Google!)
+
+   Just use utdnetid, and for the love of programming, STOP USING ALL CAPS!
+
+  [[NOTE: All CS Graduate Students should use csgrads1.utdallas.edu      ]]
+  [[   If you are a CS Graduate Student, you cannot logon to this server.]]
+
+
+ ***** This system will require a connection to the GlobalProtect VPN starting
+ on the following dates:
+
+ cslinux1.utdallas.edu - June 15, 2020
+ cslinux2.utdallas.edu - June 22, 2020
+
+ ***** GlobalProtect VPN Instructions: https://www.utdallas.edu/oit/howto/vpn/
+
+Last login: Fri Sep 27 17:40:56 2024 from 10.50.240.54
+
+                       ***---***---***---***---***---***
+                    csgrads1.utdallas.edu - CentOS Linux 7.9
+                 --All CS Graduate Students should use csgrads1--
+                      cs1.utdallas.edu - CentOS Linux 7.9
+                      cs2.utdallas.edu - CentOS Linux 7.9
+                       ***---***---***---***---***---***
+
+This system is for use by CS students who need a general purpose Linux system 
+to complete homework assignments.  Computationally or resource intensive 
+simulations will be throttled automatically.
+
+Thank you,
+CS Lab Manager
+cs-labs@utdallas.edu
+
+               /scratch disk space can be used for temporary files.
+      All files within /scratch will be erased on a regular basis (Sunday 0300).
+
+{cslinux1:~} clear
+
+{cslinux1:~} mkdir apue
+{cslinux1:~} cd apue
+{cslinux1:~/apue} gunzip src.3e.tar.gz
+{cslinux1:~/apue} ls -l
+total 224
+-rw------- 1 mga190001 sn 633344 Sep 27 18:30 src.3e.tar
+{cslinux1:~/apue} tar -xvf src.3e.tar
+apue.3e/
+apue.3e/advio/
+apue.3e/daemons/
+apue.3e/datafiles/
+apue.3e/db/
+apue.3e/DISCLAIMER
+apue.3e/environ/
+apue.3e/exercises/
+apue.3e/figlinks/
+apue.3e/filedir/
+apue.3e/fileio/
+apue.3e/include/
+apue.3e/intro/
+apue.3e/ipc1/
+apue.3e/ipc2/
+apue.3e/lib/
+apue.3e/Make.defines.freebsd
+apue.3e/Make.defines.linux
+apue.3e/Make.defines.macos
+apue.3e/Make.defines.solaris
+apue.3e/Make.libapue.inc
+apue.3e/Makefile
+apue.3e/printer/
+apue.3e/proc/
+apue.3e/pty/
+apue.3e/README
+apue.3e/relation/
+apue.3e/signals/
+apue.3e/sockets/
+apue.3e/standards/
+apue.3e/stdio/
+apue.3e/systype.sh
+apue.3e/termios/
+apue.3e/threadctl/
+apue.3e/threads/
+apue.3e/threads/badexit2.c
+apue.3e/threads/barrier.c
+apue.3e/threads/cleanup.c
+apue.3e/threads/condvar.c
+apue.3e/threads/exitstatus.c
+apue.3e/threads/Makefile
+apue.3e/threads/maketimeout.c
+apue.3e/threads/mutex1.c
+apue.3e/threads/mutex2.c
+apue.3e/threads/mutex3.c
+apue.3e/threads/rwlock.c
+apue.3e/threads/threadid.c
+apue.3e/threads/timedlock.c
+apue.3e/threadctl/atfork.c
+apue.3e/threadctl/detach.c
+apue.3e/threadctl/getenv1.c
+apue.3e/threadctl/getenv2.c
+apue.3e/threadctl/getenv3.c
+apue.3e/threadctl/Makefile
+apue.3e/threadctl/suspend.c
+apue.3e/threadctl/timeout.c
+apue.3e/termios/csize.c
+apue.3e/termios/ctermid.c
+apue.3e/termios/getpass.c
+apue.3e/termios/isatty.c
+apue.3e/termios/Makefile
+apue.3e/termios/settty.c
+apue.3e/termios/t_getpass.c
+apue.3e/termios/t_isatty.c
+apue.3e/termios/t_raw.c
+apue.3e/termios/t_ttyname.c
+apue.3e/termios/ttyname.c
+apue.3e/termios/winch.c
+apue.3e/stdio/buf.c
+apue.3e/stdio/fgetsfputs.c
+apue.3e/stdio/getcharbug.c
+apue.3e/stdio/getcputc.c
+apue.3e/stdio/Makefile
+apue.3e/stdio/memstr.c
+apue.3e/stdio/mkstemp.c
+apue.3e/stdio/tempfiles.c
+apue.3e/standards/conf.c.modified
+apue.3e/standards/makeconf.awk
+apue.3e/standards/Makefile
+apue.3e/standards/makeopt.awk
+apue.3e/standards/pathconf-lim.sym
+apue.3e/standards/pathconf-opt.sym
+apue.3e/standards/sysconf-lim.sym
+apue.3e/standards/sysconf-opt.sym
+apue.3e/sockets/clconn.c
+apue.3e/sockets/clconn2.c
+apue.3e/sockets/findsvc.c
+apue.3e/sockets/initsrv1.c
+apue.3e/sockets/initsrv2.c
+apue.3e/sockets/makefile
+apue.3e/sockets/ruptime-dg.c
+apue.3e/sockets/ruptime.c
+apue.3e/sockets/ruptimed-dg.c
+apue.3e/sockets/ruptimed-fd.c
+apue.3e/sockets/ruptimed.c
+apue.3e/signals/abort.c
+apue.3e/signals/child.c
+apue.3e/signals/critical.c
+apue.3e/signals/Makefile
+apue.3e/signals/mask.c
+apue.3e/signals/read1.c
+apue.3e/signals/read2.c
+apue.3e/signals/reenter.c
+apue.3e/signals/setops.c
+apue.3e/signals/sigtstp.c
+apue.3e/signals/sigusr.c
+apue.3e/signals/sleep1.c
+apue.3e/signals/sleep2.c
+apue.3e/signals/suspend1.c
+apue.3e/signals/suspend2.c
+apue.3e/signals/system.c
+apue.3e/signals/systest2.c
+apue.3e/signals/tsleep2.c
+apue.3e/relation/Makefile
+apue.3e/relation/orphan3.c
+apue.3e/pty/driver.c
+apue.3e/pty/loop.c
+apue.3e/pty/main.c
+apue.3e/pty/Makefile
+apue.3e/proc/awkexample
+apue.3e/proc/echoall.c
+apue.3e/proc/exec1.c
+apue.3e/proc/exec2.c
+apue.3e/proc/fork1.c
+apue.3e/proc/fork2.c
+apue.3e/proc/Makefile
+apue.3e/proc/nice.c
+apue.3e/proc/pracct.c
+apue.3e/proc/pruids.c
+apue.3e/proc/system.c
+apue.3e/proc/systest1.c
+apue.3e/proc/systest3.c
+apue.3e/proc/tellwait1.c
+apue.3e/proc/tellwait2.c
+apue.3e/proc/test1.c
+apue.3e/proc/times1.c
+apue.3e/proc/vfork1.c
+apue.3e/proc/wait1.c
+apue.3e/printer/ipp.h
+apue.3e/printer/Makefile
+apue.3e/printer/print.c
+apue.3e/printer/print.h
+apue.3e/printer/printd.c
+apue.3e/printer/util.c
+apue.3e/lib/bufargs.c
+apue.3e/lib/cliconn.c
+apue.3e/lib/clrfl.c
+apue.3e/lib/daemonize.c
+apue.3e/lib/error.c
+apue.3e/lib/errorlog.c
+apue.3e/lib/lockreg.c
+apue.3e/lib/locktest.c
+apue.3e/lib/Makefile
+apue.3e/lib/nspipe.c
+apue.3e/lib/openmax.c
+apue.3e/lib/Orecvfd.c
+apue.3e/lib/pathalloc.c
+apue.3e/lib/popen.c
+apue.3e/lib/prexit.c
+apue.3e/lib/prmask.c
+apue.3e/lib/ptyfork.c
+apue.3e/lib/ptyopen.c
+apue.3e/lib/readn.c
+apue.3e/lib/recvfd.c
+apue.3e/lib/semaph.c
+apue.3e/lib/senderr.c
+apue.3e/lib/sendfd.c
+apue.3e/lib/servaccept.c
+apue.3e/lib/servlisten.c
+apue.3e/lib/setfd.c
+apue.3e/lib/setfl.c
+apue.3e/lib/signal.c
+apue.3e/lib/signalintr.c
+apue.3e/lib/sleep.c
+apue.3e/lib/sleepus.c
+apue.3e/lib/spipe.c
+apue.3e/lib/strerror.c
+apue.3e/lib/tellwait.c
+apue.3e/lib/ttymodes.c
+apue.3e/lib/writen.c
+apue.3e/ipc2/bindunix.c
+apue.3e/ipc2/Makefile
+apue.3e/ipc2/open/
+apue.3e/ipc2/open.fe/
+apue.3e/ipc2/opend/
+apue.3e/ipc2/opend.fe/
+apue.3e/ipc2/pollmsg.c
+apue.3e/ipc2/recvfd2.c
+apue.3e/ipc2/sendfd2.c
+apue.3e/ipc2/sendmsg.c
+apue.3e/ipc2/opend.fe/cliargs.c
+apue.3e/ipc2/opend.fe/main.c
+apue.3e/ipc2/opend.fe/Makefile
+apue.3e/ipc2/opend.fe/opend.h
+apue.3e/ipc2/opend.fe/request.c
+apue.3e/ipc2/opend/cliargs.c
+apue.3e/ipc2/opend/client.c
+apue.3e/ipc2/opend/loop.poll.c
+apue.3e/ipc2/opend/loop.select.c
+apue.3e/ipc2/opend/main.c
+apue.3e/ipc2/opend/Makefile
+apue.3e/ipc2/opend/opend.h
+apue.3e/ipc2/opend/request.c
+apue.3e/ipc2/open.fe/main.c
+apue.3e/ipc2/open.fe/Makefile
+apue.3e/ipc2/open.fe/open.c
+apue.3e/ipc2/open.fe/open.h
+apue.3e/ipc2/open/main.c
+apue.3e/ipc2/open/Makefile
+apue.3e/ipc2/open/open.c
+apue.3e/ipc2/open/open.h
+apue.3e/ipc1/add2.c
+apue.3e/ipc1/add2stdio.c
+apue.3e/ipc1/devzero.c
+apue.3e/ipc1/Makefile
+apue.3e/ipc1/myuclc.c
+apue.3e/ipc1/pipe1.c
+apue.3e/ipc1/pipe2.c
+apue.3e/ipc1/pipe4.c
+apue.3e/ipc1/popen.c
+apue.3e/ipc1/popen1.c
+apue.3e/ipc1/popen2.c
+apue.3e/ipc1/slock.c
+apue.3e/ipc1/slock.h
+apue.3e/ipc1/tellwait.c
+apue.3e/ipc1/tshm.c
+apue.3e/intro/getcputc.c
+apue.3e/intro/hello.c
+apue.3e/intro/ls1.c
+apue.3e/intro/Makefile
+apue.3e/intro/mycat.c
+apue.3e/intro/shell1.c
+apue.3e/intro/shell2.c
+apue.3e/intro/testerror.c
+apue.3e/intro/uidgid.c
+apue.3e/include/apue.h
+apue.3e/fileio/fileflags.c
+apue.3e/fileio/hole.c
+apue.3e/fileio/Makefile
+apue.3e/fileio/mycat.c
+apue.3e/fileio/seek.c
+apue.3e/fileio/setfl.c
+apue.3e/filedir/access.c
+apue.3e/filedir/cdpwd.c
+apue.3e/filedir/changemod.c
+apue.3e/filedir/devrdev.c
+apue.3e/filedir/filetype.c
+apue.3e/filedir/ftw8.c
+apue.3e/filedir/Makefile
+apue.3e/filedir/mycd.c
+apue.3e/filedir/umask.c
+apue.3e/filedir/unlink.c
+apue.3e/filedir/zap.c
+apue.3e/figlinks/fig1.10
+apue.3e/figlinks/fig1.3
+apue.3e/figlinks/fig1.4
+apue.3e/figlinks/fig1.5
+apue.3e/figlinks/fig1.6
+apue.3e/figlinks/fig1.7
+apue.3e/figlinks/fig1.8
+apue.3e/figlinks/fig1.9
+apue.3e/figlinks/fig10.10
+apue.3e/figlinks/fig10.11
+apue.3e/figlinks/fig10.12
+apue.3e/figlinks/fig10.14
+apue.3e/figlinks/fig10.15
+apue.3e/figlinks/fig10.18
+apue.3e/figlinks/fig10.19
+apue.3e/figlinks/fig10.2
+apue.3e/figlinks/fig10.20
+apue.3e/figlinks/fig10.22
+apue.3e/figlinks/fig10.23
+apue.3e/figlinks/fig10.24
+apue.3e/figlinks/fig10.25
+apue.3e/figlinks/fig10.26
+apue.3e/figlinks/fig10.28
+apue.3e/figlinks/fig10.29
+apue.3e/figlinks/fig10.31
+apue.3e/figlinks/fig10.5
+apue.3e/figlinks/fig10.6
+apue.3e/figlinks/fig10.7
+apue.3e/figlinks/fig10.8
+apue.3e/figlinks/fig10.9
+apue.3e/figlinks/fig11.10
+apue.3e/figlinks/fig11.11
+apue.3e/figlinks/fig11.12
+apue.3e/figlinks/fig11.14
+apue.3e/figlinks/fig11.15
+apue.3e/figlinks/fig11.16
+apue.3e/figlinks/fig11.2
+apue.3e/figlinks/fig11.3
+apue.3e/figlinks/fig11.4
+apue.3e/figlinks/fig11.5
+apue.3e/figlinks/fig12.11
+apue.3e/figlinks/fig12.12
+apue.3e/figlinks/fig12.13
+apue.3e/figlinks/fig12.16
+apue.3e/figlinks/fig12.17
+apue.3e/figlinks/fig12.4
+apue.3e/figlinks/fig12.8
+apue.3e/figlinks/fig13.1
+apue.3e/figlinks/fig13.6
+apue.3e/figlinks/fig13.7
+apue.3e/figlinks/fig13.8
+apue.3e/figlinks/fig13.9
+apue.3e/figlinks/fig14.1
+apue.3e/figlinks/fig14.12
+apue.3e/figlinks/fig14.20
+apue.3e/figlinks/fig14.21
+apue.3e/figlinks/fig14.24
+apue.3e/figlinks/fig14.27
+apue.3e/figlinks/fig14.5
+apue.3e/figlinks/fig14.6
+apue.3e/figlinks/fig14.7
+apue.3e/figlinks/fig14.9
+apue.3e/figlinks/fig15.11
+apue.3e/figlinks/fig15.12
+apue.3e/figlinks/fig15.14
+apue.3e/figlinks/fig15.15
+apue.3e/figlinks/fig15.17
+apue.3e/figlinks/fig15.18
+apue.3e/figlinks/fig15.19
+apue.3e/figlinks/fig15.31
+apue.3e/figlinks/fig15.33
+apue.3e/figlinks/fig15.35
+apue.3e/figlinks/fig15.5
+apue.3e/figlinks/fig15.6
+apue.3e/figlinks/fig15.7
+apue.3e/figlinks/fig16.10
+apue.3e/figlinks/fig16.11
+apue.3e/figlinks/fig16.12
+apue.3e/figlinks/fig16.16
+apue.3e/figlinks/fig16.17
+apue.3e/figlinks/fig16.18
+apue.3e/figlinks/fig16.19
+apue.3e/figlinks/fig16.20
+apue.3e/figlinks/fig16.22
+apue.3e/figlinks/fig16.9
+apue.3e/figlinks/fig17.10
+apue.3e/figlinks/fig17.12
+apue.3e/figlinks/fig17.13
+apue.3e/figlinks/fig17.14
+apue.3e/figlinks/fig17.15
+apue.3e/figlinks/fig17.16
+apue.3e/figlinks/fig17.17
+apue.3e/figlinks/fig17.18
+apue.3e/figlinks/fig17.19
+apue.3e/figlinks/fig17.2
+apue.3e/figlinks/fig17.20
+apue.3e/figlinks/fig17.21
+apue.3e/figlinks/fig17.22
+apue.3e/figlinks/fig17.23
+apue.3e/figlinks/fig17.24
+apue.3e/figlinks/fig17.25
+apue.3e/figlinks/fig17.26
+apue.3e/figlinks/fig17.27
+apue.3e/figlinks/fig17.28
+apue.3e/figlinks/fig17.29
+apue.3e/figlinks/fig17.3
+apue.3e/figlinks/fig17.30
+apue.3e/figlinks/fig17.31
+apue.3e/figlinks/fig17.4
+apue.3e/figlinks/fig17.5
+apue.3e/figlinks/fig17.8
+apue.3e/figlinks/fig17.9
+apue.3e/figlinks/fig18.10
+apue.3e/figlinks/fig18.11
+apue.3e/figlinks/fig18.12
+apue.3e/figlinks/fig18.13
+apue.3e/figlinks/fig18.14
+apue.3e/figlinks/fig18.15
+apue.3e/figlinks/fig18.16
+apue.3e/figlinks/fig18.17
+apue.3e/figlinks/fig18.18
+apue.3e/figlinks/fig18.20
+apue.3e/figlinks/fig18.21
+apue.3e/figlinks/fig18.22
+apue.3e/figlinks/fig19.10
+apue.3e/figlinks/fig19.11
+apue.3e/figlinks/fig19.12
+apue.3e/figlinks/fig19.16
+apue.3e/figlinks/fig19.9
+apue.3e/figlinks/fig2.13
+apue.3e/figlinks/fig2.14
+apue.3e/figlinks/fig2.16
+apue.3e/figlinks/fig2.17
+apue.3e/figlinks/fig20.3
+apue.3e/figlinks/fig3.1
+apue.3e/figlinks/fig3.11
+apue.3e/figlinks/fig3.12
+apue.3e/figlinks/fig3.2
+apue.3e/figlinks/fig3.5
+apue.3e/figlinks/fig4.12
+apue.3e/figlinks/fig4.16
+apue.3e/figlinks/fig4.21
+apue.3e/figlinks/fig4.22
+apue.3e/figlinks/fig4.23
+apue.3e/figlinks/fig4.24
+apue.3e/figlinks/fig4.25
+apue.3e/figlinks/fig4.3
+apue.3e/figlinks/fig4.8
+apue.3e/figlinks/fig4.9
+apue.3e/figlinks/fig5.11
+apue.3e/figlinks/fig5.12
+apue.3e/figlinks/fig5.13
+apue.3e/figlinks/fig5.15
+apue.3e/figlinks/fig5.4
+apue.3e/figlinks/fig5.5
+apue.3e/figlinks/fig6.11
+apue.3e/figlinks/fig6.2
+apue.3e/figlinks/fig7.1
+apue.3e/figlinks/fig7.11
+apue.3e/figlinks/fig7.13
+apue.3e/figlinks/fig7.14
+apue.3e/figlinks/fig7.16
+apue.3e/figlinks/fig7.3
+apue.3e/figlinks/fig7.4
+apue.3e/figlinks/fig7.9
+apue.3e/figlinks/fig8.1
+apue.3e/figlinks/fig8.12
+apue.3e/figlinks/fig8.13
+apue.3e/figlinks/fig8.16
+apue.3e/figlinks/fig8.17
+apue.3e/figlinks/fig8.20
+apue.3e/figlinks/fig8.21
+apue.3e/figlinks/fig8.22
+apue.3e/figlinks/fig8.23
+apue.3e/figlinks/fig8.24
+apue.3e/figlinks/fig8.25
+apue.3e/figlinks/fig8.28
+apue.3e/figlinks/fig8.29
+apue.3e/figlinks/fig8.3
+apue.3e/figlinks/fig8.30
+apue.3e/figlinks/fig8.31
+apue.3e/figlinks/fig8.5
+apue.3e/figlinks/fig8.6
+apue.3e/figlinks/fig8.8
+apue.3e/figlinks/fig9.12
+apue.3e/figlinks/figB.1
+apue.3e/figlinks/figB.3
+apue.3e/figlinks/figB.4
+apue.3e/figlinks/figC.1
+apue.3e/figlinks/figC.10
+apue.3e/figlinks/figC.12
+apue.3e/figlinks/figC.13
+apue.3e/figlinks/figC.14
+apue.3e/figlinks/figC.15
+apue.3e/figlinks/figC.16
+apue.3e/figlinks/figC.17
+apue.3e/figlinks/figC.18
+apue.3e/figlinks/figC.20
+apue.3e/figlinks/figC.22
+apue.3e/figlinks/figC.23
+apue.3e/figlinks/figC.24
+apue.3e/figlinks/figC.3
+apue.3e/figlinks/figC.4
+apue.3e/figlinks/figC.5
+apue.3e/figlinks/figC.6
+apue.3e/figlinks/figC.7
+apue.3e/figlinks/figC.8
+apue.3e/exercises/asyncsocket.c
+apue.3e/exercises/bo.c
+apue.3e/exercises/fifo1.c
+apue.3e/exercises/fmemopen.c
+apue.3e/exercises/getlogin.c
+apue.3e/exercises/getpw44bsd.c
+apue.3e/exercises/getpwsvr4.c
+apue.3e/exercises/goodexit.c
+apue.3e/exercises/longpath.c
+apue.3e/exercises/Makefile
+apue.3e/exercises/openmax.c
+apue.3e/exercises/pendlock.c
+apue.3e/exercises/pollmsg2.c
+apue.3e/exercises/prtime.c
+apue.3e/exercises/sizepipe.c
+apue.3e/exercises/sleep.c
+apue.3e/exercises/sleepus_poll.c
+apue.3e/exercises/sleepus_select.c
+apue.3e/exercises/vfork3.c
+apue.3e/exercises/zombie.c
+apue.3e/environ/cmd1.c
+apue.3e/environ/cmd2.c
+apue.3e/environ/doatexit.c
+apue.3e/environ/echoarg.c
+apue.3e/environ/getrlimit.c
+apue.3e/environ/hello1.c
+apue.3e/environ/Makefile
+apue.3e/environ/opendata.c
+apue.3e/environ/scope.c
+apue.3e/environ/testjmp.c
+apue.3e/db/apue_db.h
+apue.3e/db/db.c
+apue.3e/db/Makefile
+apue.3e/db/t4.c
+apue.3e/datafiles/getpwnam.c
+apue.3e/datafiles/Makefile
+apue.3e/datafiles/strftime.c
+apue.3e/daemons/init.c
+apue.3e/daemons/Makefile
+apue.3e/daemons/reread.c
+apue.3e/daemons/reread2.c
+apue.3e/daemons/single.c
+apue.3e/advio/deadlock.c
+apue.3e/advio/fixup.awk
+apue.3e/advio/lockfile.c
+apue.3e/advio/Makefile
+apue.3e/advio/mandatory.c
+apue.3e/advio/mcopy2.c
+apue.3e/advio/nonblockw.c
+apue.3e/advio/readn.c
+apue.3e/advio/rot13a.c
+apue.3e/advio/rot13c2.c.in
+apue.3e/advio/writen.c
+{cslinux1:~/apue} ls
+apue.3e  src.3e.tar
+{cslinux1:~/apue} cd apue.3e
+{cslinux1:~/apue/apue.3e} ls
+advio       figlinks  lib                   printer   standards
+daemons     filedir   Make.defines.freebsd  proc      stdio
+datafiles   fileio    Make.defines.linux    pty       systype.sh
+db          include   Make.defines.macos    README    termios
+DISCLAIMER  intro     Make.defines.solaris  relation  threadctl
+environ     ipc1      Makefile              signals   threads
+exercises   ipc2      Make.libapue.inc      sockets
+{cslinux1:~/apue/apue.3e} make
+for i in lib intro sockets advio daemons datafiles db environ fileio filedir ipc1 ipc2 proc pty relation signals standards stdio termios threadctl threads printer exercises; do \
+	(cd $i && echo "making $i" && make ) || exit 1; \
+done
+making lib
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/lib'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o bufargs.o bufargs.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o cliconn.o cliconn.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o clrfl.o clrfl.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o daemonize.o daemonize.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o error.o error.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o errorlog.o errorlog.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o lockreg.o lockreg.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o locktest.o locktest.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o openmax.o openmax.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o pathalloc.o pathalloc.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o popen.o popen.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o prexit.o prexit.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o prmask.o prmask.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ptyfork.o ptyfork.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ptyopen.o ptyopen.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o readn.o readn.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o recvfd.o recvfd.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o senderr.o senderr.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o sendfd.o sendfd.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o servaccept.o servaccept.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o servlisten.o servlisten.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o setfd.o setfd.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o setfl.o setfl.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o signal.o signal.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o signalintr.o signalintr.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o sleepus.o sleepus.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o spipe.o spipe.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o tellwait.o tellwait.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ttymodes.o ttymodes.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o writen.o writen.c
+ar rv libapue.a bufargs.o cliconn.o clrfl.o daemonize.o error.o errorlog.o lockreg.o locktest.o openmax.o pathalloc.o popen.o prexit.o prmask.o ptyfork.o ptyopen.o readn.o recvfd.o senderr.o sendfd.o servaccept.o servlisten.o setfd.o setfl.o signal.o signalintr.o sleepus.o spipe.o tellwait.o ttymodes.o writen.o
+ar: creating libapue.a
+a - bufargs.o
+a - cliconn.o
+a - clrfl.o
+a - daemonize.o
+a - error.o
+a - errorlog.o
+a - lockreg.o
+a - locktest.o
+a - openmax.o
+a - pathalloc.o
+a - popen.o
+a - prexit.o
+a - prmask.o
+a - ptyfork.o
+a - ptyopen.o
+a - readn.o
+a - recvfd.o
+a - senderr.o
+a - sendfd.o
+a - servaccept.o
+a - servlisten.o
+a - setfd.o
+a - setfl.o
+a - signal.o
+a - signalintr.o
+a - sleepus.o
+a - spipe.o
+a - tellwait.o
+a - ttymodes.o
+a - writen.o
+echo libapue.a
+libapue.a
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o sleep.o sleep.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/lib'
+making intro
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/intro'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  getcputc.c -o getcputc  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  hello.c -o hello  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  ls1.c -o ls1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mycat.c -o mycat  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  shell1.c -o shell1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  shell2.c -o shell2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  testerror.c -o testerror  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  uidgid.c -o uidgid  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/intro'
+making sockets
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/sockets'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ruptime.o ruptime.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o clconn2.o clconn2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o ruptime ruptime.o clconn2.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ruptimed.o ruptimed.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o initsrv2.o initsrv2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o ruptimed ruptimed.o initsrv2.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ruptimed-fd.o ruptimed-fd.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o ruptimed-fd ruptimed-fd.o initsrv2.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ruptimed-dg.o ruptimed-dg.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o ruptimed-dg ruptimed-dg.o initsrv2.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE    findsvc.c  -L../lib -lapue  -o findsvc
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE    ruptime-dg.c  -L../lib -lapue  -o ruptime-dg
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o clconn.o clconn.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o initsrv1.o initsrv1.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/sockets'
+making advio
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/advio'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  deadlock.c -o deadlock  -L../lib -lapue -lrt
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mandatory.c -o mandatory  -L../lib -lapue -lrt
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mcopy2.c -o mcopy2  -L../lib -lapue -lrt
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  nonblockw.c -o nonblockw  -L../lib -lapue -lrt
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  rot13a.c -o rot13a  -L../lib -lapue -lrt
+./fixup.awk rot13a.c >xlate
+sed '/same/q' rot13c2.c.in >rot13c2.c
+cat xlate >>rot13c2.c
+sed '1,/same/d' rot13c2.c.in >>rot13c2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  rot13c2.c -o rot13c2  -L../lib -lapue -lrt
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o lockfile.o lockfile.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/advio'
+making daemons
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/daemons'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o init.o init.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o reread.o reread.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o reread2.o reread2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o single.o single.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/daemons'
+making datafiles
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/datafiles'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  strftime.c -o strftime  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o getpwnam.o getpwnam.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/datafiles'
+making db
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/db'
+gcc -fPIC -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -c db.c
+gcc -shared -Wl,-dylib -o libapue_db.so.1 -L../lib -lapue -lc db.o
+ln -s libapue_db.so.1 libapue_db.so
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -c -I. t4.c
+gcc -Wl,-rpath=. -o t4 t4.o -L../lib -L. -lapue_db -lapue
+ar rsv libapue_db.a db.o
+ar: creating libapue_db.a
+a - db.o
+echo libapue_db.a
+libapue_db.a
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/db'
+making environ
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/environ'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  doatexit.c -o doatexit  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  echoarg.c -o echoarg  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  getrlimit.c -o getrlimit  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  hello1.c -o hello1  -L../lib -lapue 
+hello1.c:3:1: warning: return type defaults to ‘int’ [-Wreturn-type]
+ main()
+ ^
+hello1.c: In function ‘main’:
+hello1.c:6:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  testjmp.c -o testjmp  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o opendata.o opendata.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o scope.o scope.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/environ'
+making fileio
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/fileio'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  fileflags.c -o fileflags  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  hole.c -o hole  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mycat.c -o mycat  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  seek.c -o seek  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o setfl.o setfl.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/fileio'
+making filedir
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/filedir'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  access.c -o access  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  cdpwd.c -o cdpwd  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  changemod.c -o changemod  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  devrdev.c -o devrdev  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  filetype.c -o filetype  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mycd.c -o mycd  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  umask.c -o umask  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  unlink.c -o unlink  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  zap.c -o zap  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   ftw8.c -o ftw8  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/filedir'
+making ipc1
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc1'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  add2.c -o add2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  add2stdio.c -o add2stdio  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  devzero.c -o devzero  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  myuclc.c -o myuclc  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  pipe1.c -o pipe1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  pipe2.c -o pipe2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  pipe4.c -o pipe4  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  popen1.c -o popen1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  popen2.c -o popen2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  tshm.c -o tshm  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o popen.o popen.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o slock.o slock.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o tellwait.o tellwait.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc1'
+making ipc2
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  bindunix.c -o bindunix  -L../lib -lapue -pthread
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  pollmsg.c -o pollmsg  -L../lib -lapue -pthread
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  sendmsg.c -o sendmsg  -L../lib -lapue -pthread
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o recvfd2.o recvfd2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o sendfd2.o sendfd2.c
+for i in open opend open.fe opend.fe; do \
+	(cd $i && make ) || exit 1; \
+done
+make[2]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/open'
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o main.o main.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o open.o open.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE  -o openclient main.o open.o  -L../../lib -lapue 
+make[2]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/open'
+make[2]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/opend'
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o main.o main.c
+main.c: In function ‘main’:
+main.c:32:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o request.o request.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o cliargs.o cliargs.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o client.o client.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o loop.poll.o loop.poll.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE  -o opend.poll main.o cliargs.o client.o request.o loop.poll.o \
+	 -L../../lib -lapue 
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o loop.select.o loop.select.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE  -o opend.select main.o cliargs.o client.o request.o loop.select.o \
+	 -L../../lib -lapue 
+make[2]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/opend'
+make[2]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/open.fe'
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o main.o main.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o open.o open.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE  -o openclient main.o open.o  -L../../lib -lapue 
+make[2]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/open.fe'
+make[2]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/opend.fe'
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o main.o main.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o request.o request.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE   -c -o cliargs.o cliargs.c
+gcc -ansi -I../../include -Wall -DLINUX -D_GNU_SOURCE  -o opend main.o cliargs.o request.o  -L../../lib -lapue 
+make[2]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2/opend.fe'
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/ipc2'
+making proc
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/proc'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  echoall.c -o echoall  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  exec1.c -o exec1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  exec2.c -o exec2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  fork1.c -o fork1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  fork2.c -o fork2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  nice.c -o nice  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  pruids.c -o pruids  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  tellwait1.c -o tellwait1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  tellwait2.c -o tellwait2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  test1.c -o test1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  times1.c -o times1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  vfork1.c -o vfork1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  wait1.c -o wait1  -L../lib -lapue 
+wait1.c: In function ‘main’:
+wait1.c:31:10: warning: division by zero [-Wdiv-by-zero]
+   status /= 0;    /* divide by 0 generates SIGFPE */
+          ^
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o system.o system.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o systest1.o systest1.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o systest1 systest1.o system.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o systest3.o systest3.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o systest3 systest3.o system.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -DHAS_AXSIG -DHAS_ACORE -o pracct pracct.c  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/proc'
+making pty
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/pty'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o main.o main.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o loop.o loop.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o driver.o driver.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o pty main.o loop.o driver.o  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/pty'
+making relation
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/relation'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  orphan3.c -o orphan3  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/relation'
+making signals
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/signals'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  critical.c -o critical  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mask.c -o mask  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  read1.c -o read1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  read2.c -o read2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  reenter.c -o reenter  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  sigtstp.c -o sigtstp  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  sigusr.c -o sigusr  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  suspend1.c -o suspend1  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  suspend2.c -o suspend2  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o systest2.o systest2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o system.o system.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o systest2 systest2.o system.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o tsleep2.o tsleep2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o sleep2.o sleep2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  -o tsleep2 tsleep2.o sleep2.o  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o abort.o abort.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o sleep1.o sleep1.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  child.c -o child  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/signals'
+making standards
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/standards'
+grep -v "^#" sysconf-lim.sym >sysconf.sym
+grep -v "^#" pathconf-lim.sym >pathconf.sym
+awk -f makeconf.awk >conf.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  conf.c -o conf  -L../lib -lapue 
+grep -v "^#" sysconf-opt.sym >sysopt.sym
+grep -v "^#" pathconf-opt.sym >pathopt.sym
+awk -f makeopt.awk >options.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  options.c -o options  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/standards'
+making stdio
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/stdio'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  buf.c -o buf  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  fgetsfputs.c -o fgetsfputs  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  getcharbug.c -o getcharbug  -L../lib -lapue 
+getcharbug.c: In function ‘main’:
+getcharbug.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  getcputc.c -o getcputc  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  mkstemp.c -o mkstemp  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  tempfiles.c -o tempfiles  -L../lib -lapue 
+/usr/tmp/ccr1POke.o: In function `main':
+tempfiles.c:(.text+0x11): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  memstr.c -o memstr  -L../lib -lapue 
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/stdio'
+making termios
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/termios'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  csize.c -o csize  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  settty.c -o settty  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  t_getpass.c -o t_getpass  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  t_isatty.c -o t_isatty  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  t_raw.c -o t_raw  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  t_ttyname.c -o t_ttyname  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  winch.c -o winch  -L../lib -lapue 
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ctermid.o ctermid.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o getpass.o getpass.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o isatty.o isatty.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o ttyname.o ttyname.c
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/termios'
+making threadctl
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/threadctl'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  atfork.c -o atfork  -L../lib -lapue -pthread
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  suspend.c -o suspend  -L../lib -lapue -pthread
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o detach.o detach.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o getenv1.o getenv1.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o getenv2.o getenv2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o getenv3.o getenv3.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o timeout.o timeout.c
+timeout.c: In function ‘main’:
+timeout.c:119:5: warning: ‘condition’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  if (condition) {
+     ^
+timeout.c:125:34: warning: ‘arg’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   timeout(&when, retry, (void *)((unsigned long)arg));
+                                  ^
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/threadctl'
+making threads
+make[1]: Entering directory `/home/013/m/mg/mga190001/apue/apue.3e/threads'
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  badexit2.c -o badexit2  -L../lib -lapue -pthread -lrt -lbsd
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  cleanup.c -o cleanup  -L../lib -lapue -pthread -lrt -lbsd
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  exitstatus.c -o exitstatus  -L../lib -lapue -pthread -lrt -lbsd
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  threadid.c -o threadid  -L../lib -lapue -pthread -lrt -lbsd
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o condvar.o condvar.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o maketimeout.o maketimeout.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o mutex1.o mutex1.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o mutex2.o mutex2.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o mutex3.o mutex3.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE   -c -o rwlock.o rwlock.c
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  timedlock.c -o timedlock  -L../lib -lapue -pthread -lrt -lbsd
+gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  barrier.c -o barrier  -L../lib -lapue -pthread -lrt -lbsd
+/usr/tmp/ccdDv7xv.o: In function `thr_fn':
+barrier.c:(.text+0x80): undefined reference to `heapsort'
+collect2: error: ld returned 1 exit status
+make[1]: *** [barrier] Error 1
+make[1]: Leaving directory `/home/013/m/mg/mga190001/apue/apue.3e/threads'
+make: *** [all] Error 1
+{cslinux1:~/apue/apue.3e} chmod -R a+x *
+{cslinux1:~/apue/apue.3e} ls
+advio       figlinks  lib                   printer   standards
+daemons     filedir   Make.defines.freebsd  proc      stdio
+datafiles   fileio    Make.defines.linux    pty       systype.sh
+db          include   Make.defines.macos    README    termios
+DISCLAIMER  intro     Make.defines.solaris  relation  threadctl
+environ     ipc1      Makefile              signals   threads
+exercises   ipc2      Make.libapue.inc      sockets
+{cslinux1:~/apue/apue.3e} cd intro
+{cslinux1:~/apue/apue.3e/intro} ls
+getcputc    hello.c  Makefile  shell1    shell2.c     uidgid
+getcputc.c  ls1      mycat     shell1.c  testerror    uidgid.c
+hello       ls1.c    mycat.c   shell2    testerror.c
+{cslinux1:~/apue/apue.3e/intro} cat hello.c
+#include "apue.h"
+
+int
+main(void)
+{
+	printf("hello world from process ID %ld\n", (long)getpid());
+	exit(0);
+}
+{cslinux1:~/apue/apue.3e/intro} ./hello
+hello world from process ID 16329
+{cslinux1:~/apue/apue.3e/intro} ./shell1
+% ls -l
+couldn't execute: ls -l: No such file or directory
+% ls
+getcputc    hello.c  Makefile  shell1	 shell2.c     uidgid
+getcputc.c  ls1      mycat     shell1.c  testerror    uidgid.c
+hello	    ls1.c    mycat.c   shell2	 testerror.c
+% date
+Fri Sep 27 18:41:14 CDT 2024
+% whoami
+mga190001
+% ^C
+{cslinux1:~/apue/apue.3e/intro} cd ..
+{cslinux1:~/apue/apue.3e} ls
+advio       figlinks  lib                   printer   standards
+daemons     filedir   Make.defines.freebsd  proc      stdio
+datafiles   fileio    Make.defines.linux    pty       systype.sh
+db          include   Make.defines.macos    README    termios
+DISCLAIMER  intro     Make.defines.solaris  relation  threadctl
+environ     ipc1      Makefile              signals   threads
+exercises   ipc2      Make.libapue.inc      sockets
+{cslinux1:~/apue/apue.3e} find . -name "apue.h"
+./include/apue.h
+{cslinux1:~/apue/apue.3e} find . -name "error.c"
+./lib/error.c
+{cslinux1:~/apue/apue.3e} cd intro
+{cslinux1:~/apue/apue.3e/intro} ls
+getcputc    hello.c  Makefile  shell1    shell2.c     uidgid
+getcputc.c  ls1      mycat     shell1.c  testerror    uidgid.c
+hello       ls1.c    mycat.c   shell2    testerror.c
+{cslinux1:~/apue/apue.3e/intro} cat hello.c
+#include "apue.h"
+
+int
+main(void)
+{
+	printf("hello world from process ID %ld\n", (long)getpid());
+	exit(0);
+}
+{cslinux1:~/apue/apue.3e/intro} ./hello
+hello world from process ID 28090
+{cslinux1:~/apue/apue.3e/intro} cd ..
+{cslinux1:~/apue/apue.3e} ls
+advio       figlinks  lib                   printer   standards
+daemons     filedir   Make.defines.freebsd  proc      stdio
+datafiles   fileio    Make.defines.linux    pty       systype.sh
+db          include   Make.defines.macos    README    termios
+DISCLAIMER  intro     Make.defines.solaris  relation  threadctl
+environ     ipc1      Makefile              signals   threads
+exercises   ipc2      Make.libapue.inc      sockets
+{cslinux1:~/apue/apue.3e} cd figlinks
+{cslinux1:~/apue/apue.3e/figlinks} ls
+fig10.10  fig11.10  fig1.4    fig15.6   fig17.2   fig18.14  fig3.5   fig7.16  fig9.12
+fig10.11  fig11.11  fig14.1   fig15.7   fig17.20  fig18.15  fig4.12  fig7.3   figB.1
+fig10.12  fig11.12  fig14.12  fig1.6    fig17.21  fig18.16  fig4.16  fig7.4   figB.3
+fig10.14  fig11.14  fig14.20  fig16.10  fig17.22  fig18.17  fig4.21  fig7.9   figB.4
+fig10.15  fig11.15  fig14.21  fig16.11  fig17.23  fig18.18  fig4.22  fig8.1   figC.1
+fig10.18  fig11.16  fig14.24  fig16.12  fig17.24  fig18.20  fig4.23  fig8.12  figC.10
+fig10.19  fig11.2   fig14.27  fig16.16  fig17.25  fig18.21  fig4.24  fig8.13  figC.12
+fig10.2   fig11.3   fig14.5   fig16.17  fig17.26  fig18.22  fig4.25  fig8.16  figC.13
+fig10.20  fig11.4   fig14.6   fig16.18  fig17.27  fig1.9    fig4.3   fig8.17  figC.14
+fig10.22  fig11.5   fig14.7   fig16.19  fig17.28  fig19.10  fig4.8   fig8.20  figC.15
+fig10.23  fig12.11  fig14.9   fig16.20  fig17.29  fig19.11  fig4.9   fig8.21  figC.16
+fig10.24  fig12.12  fig1.5    fig16.22  fig17.3   fig19.12  fig5.11  fig8.22  figC.17
+fig10.25  fig12.13  fig15.11  fig16.9   fig17.30  fig19.16  fig5.12  fig8.23  figC.18
+fig10.26  fig12.16  fig15.12  fig1.7    fig17.31  fig19.9   fig5.13  fig8.24  figC.20
+fig10.28  fig12.17  fig15.14  fig17.10  fig17.4   fig20.3   fig5.15  fig8.25  figC.22
+fig10.29  fig12.4   fig15.15  fig17.12  fig17.5   fig2.13   fig5.4   fig8.28  figC.23
+fig10.31  fig12.8   fig15.17  fig17.13  fig17.8   fig2.14   fig5.5   fig8.29  figC.24
+fig10.5   fig1.3    fig15.18  fig17.14  fig17.9   fig2.16   fig6.11  fig8.3   figC.3
+fig10.6   fig13.1   fig15.19  fig17.15  fig1.8    fig2.17   fig6.2   fig8.30  figC.4
+fig10.7   fig13.6   fig15.31  fig17.16  fig18.10  fig3.1    fig7.1   fig8.31  figC.5
+fig10.8   fig13.7   fig15.33  fig17.17  fig18.11  fig3.11   fig7.11  fig8.5   figC.6
+fig10.9   fig13.8   fig15.35  fig17.18  fig18.12  fig3.12   fig7.13  fig8.6   figC.7
+fig1.10   fig13.9   fig15.5   fig17.19  fig18.13  fig3.2    fig7.14  fig8.8   figC.8
+{cslinux1:~/apue/apue.3e/figlinks} cat fig1.3
+#include "apue.h"
+#include <dirent.h>
+
+int
+main(int argc, char *argv[])
+{
+	DIR				*dp;
+	struct dirent	*dirp;
+
+	if (argc != 2)
+		err_quit("usage: ls directory_name");
+
+	if ((dp = opendir(argv[1])) == NULL)
+		err_sys("can't open %s", argv[1]);
+	while ((dirp = readdir(dp)) != NULL)
+		printf("%s\n", dirp->d_name);
+
+	closedir(dp);
+	exit(0);
+}
+{cslinux1:~/apue/apue.3e/figlinks} cp fig1.3 fig1-3.c
+{cslinux1:~/apue/apue.3e/figlinks} cat fig1-3.c
+#include "apue.h"
+#include <dirent.h>
+
+int
+main(int argc, char *argv[])
+{
+	DIR				*dp;
+	struct dirent	*dirp;
+
+	if (argc != 2)
+		err_quit("usage: ls directory_name");
+
+	if ((dp = opendir(argv[1])) == NULL)
+		err_sys("can't open %s", argv[1]);
+	while ((dirp = readdir(dp)) != NULL)
+		printf("%s\n", dirp->d_name);
+
+	closedir(dp);
+	exit(0);
+}
+{cslinux1:~/apue/apue.3e/figlinks} gcc fig1-3.c -o fig
+fig1-3.c:1:18: fatal error: apue.h: No such file or directory
+ #include "apue.h"
+                  ^
+compilation terminated.
+{cslinux1:~/apue/apue.3e/figlinks} cd ..
+{cslinux1:~/apue/apue.3e} ls
+advio       figlinks  lib                   printer   standards
+daemons     filedir   Make.defines.freebsd  proc      stdio
+datafiles   fileio    Make.defines.linux    pty       systype.sh
+db          include   Make.defines.macos    README    termios
+DISCLAIMER  intro     Make.defines.solaris  relation  threadctl
+environ     ipc1      Makefile              signals   threads
+exercises   ipc2      Make.libapue.inc      sockets
+{cslinux1:~/apue/apue.3e} cd include
+{cslinux1:~/apue/apue.3e/include} ls
+apue.h
+{cslinux1:~/apue/apue.3e/include} cp apue.h /apue/apue.3e/figlinks
+cp: cannot create regular file ‘/apue/apue.3e/figlinks’: No such file or directory
+{cslinux1:~/apue/apue.3e/include} cp apue.h ~/apue/apue.3e/figlinks
+{cslinux1:~/apue/apue.3e/include} cd ..
+{cslinux1:~/apue/apue.3e} cd figlinks
+{cslinux1:~/apue/apue.3e/figlinks} ls 
+apue.h    fig11.10  fig1.4    fig15.7   fig17.21  fig18.17  fig4.22  fig8.12  figC.12
+fig10.10  fig11.11  fig14.1   fig1.6    fig17.22  fig18.18  fig4.23  fig8.13  figC.13
+fig10.11  fig11.12  fig14.12  fig16.10  fig17.23  fig18.20  fig4.24  fig8.16  figC.14
+fig10.12  fig11.14  fig14.20  fig16.11  fig17.24  fig18.21  fig4.25  fig8.17  figC.15
+fig10.14  fig11.15  fig14.21  fig16.12  fig17.25  fig18.22  fig4.3   fig8.20  figC.16
+fig10.15  fig11.16  fig14.24  fig16.16  fig17.26  fig1.9    fig4.8   fig8.21  figC.17
+fig10.18  fig11.2   fig14.27  fig16.17  fig17.27  fig19.10  fig4.9   fig8.22  figC.18
+fig10.19  fig11.3   fig14.5   fig16.18  fig17.28  fig19.11  fig5.11  fig8.23  figC.20
+fig10.2   fig11.4   fig14.6   fig16.19  fig17.29  fig19.12  fig5.12  fig8.24  figC.22
+fig10.20  fig11.5   fig14.7   fig16.20  fig17.3   fig19.16  fig5.13  fig8.25  figC.23
+fig10.22  fig12.11  fig14.9   fig16.22  fig17.30  fig19.9   fig5.15  fig8.28  figC.24
+fig10.23  fig12.12  fig1.5    fig16.9   fig17.31  fig20.3   fig5.4   fig8.29  figC.3
+fig10.24  fig12.13  fig15.11  fig1.7    fig17.4   fig2.13   fig5.5   fig8.3   figC.4
+fig10.25  fig12.16  fig15.12  fig17.10  fig17.5   fig2.14   fig6.11  fig8.30  figC.5
+fig10.26  fig12.17  fig15.14  fig17.12  fig17.8   fig2.16   fig6.2   fig8.31  figC.6
+fig10.28  fig12.4   fig15.15  fig17.13  fig17.9   fig2.17   fig7.1   fig8.5   figC.7
+fig10.29  fig12.8   fig15.17  fig17.14  fig1.8    fig3.1    fig7.11  fig8.6   figC.8
+fig10.31  fig1.3    fig15.18  fig17.15  fig18.10  fig3.11   fig7.13  fig8.8
+fig10.5   fig13.1   fig15.19  fig17.16  fig18.11  fig3.12   fig7.14  fig9.12
+fig10.6   fig13.6   fig15.31  fig17.17  fig18.12  fig3.2    fig7.16  figB.1
+fig10.7   fig13.7   fig15.33  fig17.18  fig18.13  fig3.5    fig7.3   figB.3
+fig10.8   fig13.8   fig15.35  fig17.19  fig18.14  fig4.12   fig7.4   figB.4
+fig10.9   fig13.9   fig15.5   fig17.2   fig18.15  fig4.16   fig7.9   figC.1
+fig1.10   fig1-3.c  fig15.6   fig17.20  fig18.16  fig4.21   fig8.1   figC.10
+{cslinux1:~/apue/apue.3e/figlinks} gcc fig1-3.c -o fig
+/usr/tmp/ccsdT4xu.o: In function `main':
+fig1-3.c:(.text+0x20): undefined reference to `err_quit'
+fig1-3.c:(.text+0x5b): undefined reference to `err_sys'
+collect2: error: ld returned 1 exit status
+{cslinux1:~/apue/apue.3e/figlinks} ls 
+apue.h    fig11.10  fig1.4    fig15.7   fig17.21  fig18.17  fig4.22  fig8.12  figC.12
+fig10.10  fig11.11  fig14.1   fig1.6    fig17.22  fig18.18  fig4.23  fig8.13  figC.13
+fig10.11  fig11.12  fig14.12  fig16.10  fig17.23  fig18.20  fig4.24  fig8.16  figC.14
+fig10.12  fig11.14  fig14.20  fig16.11  fig17.24  fig18.21  fig4.25  fig8.17  figC.15
+fig10.14  fig11.15  fig14.21  fig16.12  fig17.25  fig18.22  fig4.3   fig8.20  figC.16
+fig10.15  fig11.16  fig14.24  fig16.16  fig17.26  fig1.9    fig4.8   fig8.21  figC.17
+fig10.18  fig11.2   fig14.27  fig16.17  fig17.27  fig19.10  fig4.9   fig8.22  figC.18
+fig10.19  fig11.3   fig14.5   fig16.18  fig17.28  fig19.11  fig5.11  fig8.23  figC.20
+fig10.2   fig11.4   fig14.6   fig16.19  fig17.29  fig19.12  fig5.12  fig8.24  figC.22
+fig10.20  fig11.5   fig14.7   fig16.20  fig17.3   fig19.16  fig5.13  fig8.25  figC.23
+fig10.22  fig12.11  fig14.9   fig16.22  fig17.30  fig19.9   fig5.15  fig8.28  figC.24
+fig10.23  fig12.12  fig1.5    fig16.9   fig17.31  fig20.3   fig5.4   fig8.29  figC.3
+fig10.24  fig12.13  fig15.11  fig1.7    fig17.4   fig2.13   fig5.5   fig8.3   figC.4
+fig10.25  fig12.16  fig15.12  fig17.10  fig17.5   fig2.14   fig6.11  fig8.30  figC.5
+fig10.26  fig12.17  fig15.14  fig17.12  fig17.8   fig2.16   fig6.2   fig8.31  figC.6
+fig10.28  fig12.4   fig15.15  fig17.13  fig17.9   fig2.17   fig7.1   fig8.5   figC.7
+fig10.29  fig12.8   fig15.17  fig17.14  fig1.8    fig3.1    fig7.11  fig8.6   figC.8
+fig10.31  fig1.3    fig15.18  fig17.15  fig18.10  fig3.11   fig7.13  fig8.8
+fig10.5   fig13.1   fig15.19  fig17.16  fig18.11  fig3.12   fig7.14  fig9.12
+fig10.6   fig13.6   fig15.31  fig17.17  fig18.12  fig3.2    fig7.16  figB.1
+fig10.7   fig13.7   fig15.33  fig17.18  fig18.13  fig3.5    fig7.3   figB.3
+fig10.8   fig13.8   fig15.35  fig17.19  fig18.14  fig4.12   fig7.4   figB.4
+fig10.9   fig13.9   fig15.5   fig17.2   fig18.15  fig4.16   fig7.9   figC.1
+fig1.10   fig1-3.c  fig15.6   fig17.20  fig18.16  fig4.21   fig8.1   figC.10
+{cslinux1:~/apue/apue.3e/figlinks} ./fig1-3.c
+./fig1-3.c: line 4: int: command not found
+./fig1-3.c: line 5: syntax error near unexpected token `int'
+./fig1-3.c: line 5: `main(int argc, char *argv[])'
+{cslinux1:~/apue/apue.3e/figlinks} cd ..
+{cslinux1:~/apue/apue.3e} cd lib
+{cslinux1:~/apue/apue.3e/lib} ls
+bufargs.c    libapue.a    popen.c    recvfd.c      setfd.o       spipe.o
+bufargs.o    lockreg.c    popen.o    recvfd.o      setfl.c       strerror.c
+cliconn.c    lockreg.o    prexit.c   semaph.c      setfl.o       tellwait.c
+cliconn.o    locktest.c   prexit.o   senderr.c     signal.c      tellwait.o
+clrfl.c      locktest.o   prmask.c   senderr.o     signalintr.c  ttymodes.c
+clrfl.o      Makefile     prmask.o   sendfd.c      signalintr.o  ttymodes.o
+daemonize.c  nspipe.c     ptyfork.c  sendfd.o      signal.o      writen.c
+daemonize.o  openmax.c    ptyfork.o  servaccept.c  sleep.c       writen.o
+error.c      openmax.o    ptyopen.c  servaccept.o  sleep.o
+errorlog.c   Orecvfd.c    ptyopen.o  servlisten.c  sleepus.c
+errorlog.o   pathalloc.c  readn.c    servlisten.o  sleepus.o
+error.o      pathalloc.o  readn.o    setfd.c       spipe.c
+{cslinux1:~/apue/apue.3e/lib} cp error.c ~/apue/apue.3e/figlinks
+{cslinux1:~/apue/apue.3e/lib} cd ..
+{cslinux1:~/apue/apue.3e} cd figlinks
+{cslinux1:~/apue/apue.3e/figlinks} gcc fig1-3.c -o fig
+/usr/tmp/ccc8u0g0.o: In function `main':
+fig1-3.c:(.text+0x20): undefined reference to `err_quit'
+fig1-3.c:(.text+0x5b): undefined reference to `err_sys'
+collect2: error: ld returned 1 exit status
+{cslinux1:~/apue/apue.3e/figlinks} ls 
+apue.h    fig1.10   fig1-3.c  fig15.6   fig17.20  fig18.16  fig4.21  fig8.1   figC.10
+error.c   fig11.10  fig1.4    fig15.7   fig17.21  fig18.17  fig4.22  fig8.12  figC.12
+fig10.10  fig11.11  fig14.1   fig1.6    fig17.22  fig18.18  fig4.23  fig8.13  figC.13
+fig10.11  fig11.12  fig14.12  fig16.10  fig17.23  fig18.20  fig4.24  fig8.16  figC.14
+fig10.12  fig11.14  fig14.20  fig16.11  fig17.24  fig18.21  fig4.25  fig8.17  figC.15
+fig10.14  fig11.15  fig14.21  fig16.12  fig17.25  fig18.22  fig4.3   fig8.20  figC.16
+fig10.15  fig11.16  fig14.24  fig16.16  fig17.26  fig1.9    fig4.8   fig8.21  figC.17
+fig10.18  fig11.2   fig14.27  fig16.17  fig17.27  fig19.10  fig4.9   fig8.22  figC.18
+fig10.19  fig11.3   fig14.5   fig16.18  fig17.28  fig19.11  fig5.11  fig8.23  figC.20
+fig10.2   fig11.4   fig14.6   fig16.19  fig17.29  fig19.12  fig5.12  fig8.24  figC.22
+fig10.20  fig11.5   fig14.7   fig16.20  fig17.3   fig19.16  fig5.13  fig8.25  figC.23
+fig10.22  fig12.11  fig14.9   fig16.22  fig17.30  fig19.9   fig5.15  fig8.28  figC.24
+fig10.23  fig12.12  fig1.5    fig16.9   fig17.31  fig20.3   fig5.4   fig8.29  figC.3
+fig10.24  fig12.13  fig15.11  fig1.7    fig17.4   fig2.13   fig5.5   fig8.3   figC.4
+fig10.25  fig12.16  fig15.12  fig17.10  fig17.5   fig2.14   fig6.11  fig8.30  figC.5
+fig10.26  fig12.17  fig15.14  fig17.12  fig17.8   fig2.16   fig6.2   fig8.31  figC.6
+fig10.28  fig12.4   fig15.15  fig17.13  fig17.9   fig2.17   fig7.1   fig8.5   figC.7
+fig10.29  fig12.8   fig15.17  fig17.14  fig1.8    fig3.1    fig7.11  fig8.6   figC.8
+fig10.31  fig1.3    fig15.18  fig17.15  fig18.10  fig3.11   fig7.13  fig8.8
+fig10.5   fig13.1   fig15.19  fig17.16  fig18.11  fig3.12   fig7.14  fig9.12
+fig10.6   fig13.6   fig15.31  fig17.17  fig18.12  fig3.2    fig7.16  figB.1
+fig10.7   fig13.7   fig15.33  fig17.18  fig18.13  fig3.5    fig7.3   figB.3
+fig10.8   fig13.8   fig15.35  fig17.19  fig18.14  fig4.12   fig7.4   figB.4
+fig10.9   fig13.9   fig15.5   fig17.2   fig18.15  fig4.16   fig7.9   figC.1
+{cslinux1:~/apue/apue.3e/figlinks} gcc -o fig1-3 fig1-3.c
+/usr/tmp/cczJt9iV.o: In function `main':
+fig1-3.c:(.text+0x20): undefined reference to `err_quit'
+fig1-3.c:(.text+0x5b): undefined reference to `err_sys'
+collect2: error: ld returned 1 exit status
+{cslinux1:~/apue/apue.3e/figlinks} gcc -o fig1-3 fig1-3.c -I ~/apue/apue.3e/include/ -L~/apue/apue.3e/lib/ -error.c
+/usr/bin/ld: warning: cannot find entry symbol rror.c; defaulting to 0000000000400570
+/usr/tmp/ccAjMX6s.o: In function `main':
+fig1-3.c:(.text+0x20): undefined reference to `err_quit'
+fig1-3.c:(.text+0x5b): undefined reference to `err_sys'
+collect2: error: ld returned 1 exit status
+{cslinux1:~/apue/apue.3e/figlinks} cd ..
+{cslinux1:~/apue/apue.3e} find . -name "dirent.h"
+{cslinux1:~/apue/apue.3e} ls -l
+total 1016
+drwx--x--x 2 mga190001 sn  531 Sep 27 18:33 advio
+drwx--x--x 2 mga190001 sn  232 Sep 27 18:33 daemons
+drwx--x--x 2 mga190001 sn  136 Sep 27 18:33 datafiles
+drwx--x--x 2 mga190001 sn  255 Sep 27 18:33 db
+-r-x--x--x 1 mga190001 sn  656 Apr 26  2013 DISCLAIMER
+drwx--x--x 2 mga190001 sn  444 Sep 27 18:33 environ
+drwx--x--x 2 mga190001 sn  555 Sep 27 18:32 exercises
+drwx--x--x 2 mga190001 sn 5303 Sep 27 19:00 figlinks
+drwx--x--x 2 mga190001 sn  520 Sep 27 18:33 filedir
+drwx--x--x 2 mga190001 sn  272 Sep 27 18:33 fileio
+drwx--x--x 2 mga190001 sn   24 Sep 27 18:32 include
+drwx--x--x 2 mga190001 sn  426 Sep 27 18:33 intro
+drwx--x--x 2 mga190001 sn  701 Sep 27 18:33 ipc1
+drwx--x--x 6 mga190001 sn  388 Sep 27 18:33 ipc2
+drwx--x--x 2 mga190001 sn 1824 Sep 27 18:33 lib
+-rwx--x--x 1 mga190001 sn  528 Apr 26  2013 Make.defines.freebsd
+-rwx--x--x 1 mga190001 sn  526 Jul 22  2012 Make.defines.linux
+-rwx--x--x 1 mga190001 sn  533 Apr 26  2013 Make.defines.macos
+-rwx--x--x 1 mga190001 sn  575 Apr 26  2013 Make.defines.solaris
+-rwx--x--x 1 mga190001 sn  372 Apr 26  2013 Makefile
+-rwx--x--x 1 mga190001 sn   41 Apr 26  2013 Make.libapue.inc
+drwx--x--x 2 mga190001 sn  149 Sep 27 18:32 printer
+drwx--x--x 2 mga190001 sn  968 Sep 27 18:33 proc
+drwx--x--x 2 mga190001 sn  195 Sep 27 18:33 pty
+-rwx--x--x 1 mga190001 sn  306 Apr 26  2013 README
+drwx--x--x 2 mga190001 sn   78 Sep 27 18:33 relation
+drwx--x--x 2 mga190001 sn  925 Sep 27 18:33 signals
+drwx--x--x 2 mga190001 sn  697 Sep 27 18:33 sockets
+drwx--x--x 2 mga190001 sn  466 Sep 27 18:33 standards
+drwx--x--x 2 mga190001 sn  398 Sep 27 18:33 stdio
+-r-x--x--x 1 mga190001 sn  467 Jul  4  2012 systype.sh
+drwx--x--x 2 mga190001 sn  600 Sep 27 18:33 termios
+drwx--x--x 2 mga190001 sn  396 Sep 27 18:33 threadctl
+drwx--x--x 2 mga190001 sn  651 Sep 27 18:33 threads
+{cslinux1:~/apue/apue.3e} cd include
+{cslinux1:~/apue/apue.3e/include} ls 
+apue.h
+{cslinux1:~/apue/apue.3e/include} cd ..
+{cslinux1:~/apue/apue.3e} cd figlinks
+{cslinux1:~/apue/apue.3e/figlinks} gcc fig1-3.c apue.h error.c -o fig1-3
+{cslinux1:~/apue/apue.3e/figlinks} ./fig1-3
+usage: ls directory_name
+{cslinux1:~/apue/apue.3e/figlinks} cd
+{cslinux1:~} cd apue
+{cslinux1:~/apue} cd apue.3e
+{cslinux1:~/apue/apue.3e} cd intro
+{cslinux1:~/apue/apue.3e/intro} ls
+getcputc    hello.c  Makefile  shell1    shell2.c     uidgid
+getcputc.c  ls1      mycat     shell1.c  testerror    uidgid.c
+hello       ls1.c    mycat.c   shell2    testerror.c
+{cslinux1:~/apue/apue.3e/intro} cd ..
+{cslinux1:~/apue/apue.3e} cd include
+{cslinux1:~/apue/apue.3e/include} cp apue.h ~/apue/apue.3e/intro
+{cslinux1:~/apue/apue.3e/include} cd ..
+{cslinux1:~/apue/apue.3e} cd lib
+{cslinux1:~/apue/apue.3e/lib} cp error.c ~/apue/apue.3e/intro
+{cslinux1:~/apue/apue.3e/lib} cd
+{cslinux1:~} cd apue/apue.3e/intro
+{cslinux1:~/apue/apue.3e/intro} cd
+{cslinux1:~} cd apue/apue.3e/intro
+{cslinux1:~/apue/apue.3e/intro} cd ..
+{cslinux1:~/apue/apue.3e} cd figlinks 
+{cslinux1:~/apue/apue.3e/figlinks} cp fig1-3.c ~/apue/apue.3e/intro
+{cslinux1:~/apue/apue.3e/figlinks} cd ..
+{cslinux1:~/apue/apue.3e} cd intro
+{cslinux1:~/apue/apue.3e/intro} gcc fig1-3.c apue.h error.c -o fig1-3
+{cslinux1:~/apue/apue.3e/intro} ./fig1-3
+usage: ls directory_name
+{cslinux1:~/apue/apue.3e/intro} date
+Fri Sep 27 19:13:14 CDT 2024
+{cslinux1:~/apue/apue.3e/intro} ls -l
+total 504
+-rwx--x--x 1 mga190001 sn  4631 Sep 27 19:10 apue.h
+-rwx--x--x 1 mga190001 sn  2282 Sep 27 19:11 error.c
+-rwx--x--x 1 mga190001 sn 13440 Sep 27 19:12 fig1-3
+-rwx--x--x 1 mga190001 sn   340 Sep 27 19:12 fig1-3.c
+-rwx--x--x 1 mga190001 sn 13448 Sep 27 18:33 getcputc
+-rwx--x--x 1 mga190001 sn   198 Mar 19  2014 getcputc.c
+-rwx--x--x 1 mga190001 sn  8464 Sep 27 18:33 hello
+-rwx--x--x 1 mga190001 sn   110 Mar 19  2014 hello.c
+-rwx--x--x 1 mga190001 sn 13432 Sep 27 18:33 ls1
+-rwx--x--x 1 mga190001 sn   340 Mar 19  2014 ls1.c
+-rwx--x--x 1 mga190001 sn   309 Mar 19  2014 Makefile
+-rwx--x--x 1 mga190001 sn 13344 Sep 27 18:33 mycat
+-rwx--x--x 1 mga190001 sn   262 Mar 19  2014 mycat.c
+-rwx--x--x 1 mga190001 sn 13528 Sep 27 18:33 shell1
+-rwx--x--x 1 mga190001 sn   638 Mar 19  2014 shell1.c
+-rwx--x--x 1 mga190001 sn 13736 Sep 27 18:33 shell2
+-rwx--x--x 1 mga190001 sn   826 Mar 19  2014 shell2.c
+-rwx--x--x 1 mga190001 sn  8624 Sep 27 18:33 testerror
+-rwx--x--x 1 mga190001 sn   172 Mar 19  2014 testerror.c
+-rwx--x--x 1 mga190001 sn  8512 Sep 27 18:33 uidgid
+-rwx--x--x 1 mga190001 sn   101 Mar 19  2014 uidgid.c
+{cslinux1:~/apue/apue.3e/intro} uname -a
+Linux cslinux1.utdallas.edu 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+{cslinux1:~/apue/apue.3e/intro} exit
+logout
+Connection to cs1.utdallas.edu closed.
+➜  Malakais-MacBook-Pro ~ % 
